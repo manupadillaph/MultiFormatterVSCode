@@ -105,7 +105,7 @@ export default class Formatter {
         for (const formatter of this.formatters) {
             this.logger.appendLine(`Executing ${this.formatAction} with ${formatter}`);
 
-            await this.config.update('defaultFormatter', formatter, ConfigurationTarget.Workspace, true);
+            // await this.config.update('defaultFormatter', formatter, ConfigurationTarget.Workspace, true);
             await commands.executeCommand(this.formatAction);
         }
 
